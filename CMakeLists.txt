@@ -153,6 +153,7 @@ if(ZMQPP_BUILD_SHARED)
 	generate_export_header(zmqpp)
 elseif(ZMQPP_BUILD_STATIC)
 	generate_export_header(zmqpp-static)
+	file(RENAME "${CMAKE_CURRENT_BINARY_DIR}/zmqpp-static_export.h" "${CMAKE_CURRENT_BINARY_DIR}/zmqpp_export.h")
 endif()
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
